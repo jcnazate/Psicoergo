@@ -89,9 +89,9 @@ export function ServiceCard({
             "
             style={
               {
-                ["--btn-bg" as any]: GREEN,
-                ["--btn-fg" as any]: "#FFFFFF",
-              } as React.CSSProperties
+                ["--btn-bg"]: GREEN,
+                ["--btn-fg"]: "#FFFFFF",
+              } as Record<string, string>
             }
           >
             Detalles →
