@@ -1,103 +1,207 @@
-import Image from "next/image";
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
+import { ServicesCarousel } from "@/components/servicesCarousel"
+import TeamShowcase from "@/components/TeamShowcase"
+import { Brain, Users, Shield, Heart, ArrowRight, CheckCircle, Phone, Mail, TrendingUp, BarChart3, ClipboardList } from "lucide-react"
+import HeroBackground from "@/components/hero-background"
+import Image from "next/image"
+import { ClientsMarquee } from "@/components/clients-marquee"
 
-export default function Home() {
+export default function HomePage() {
+  const services = [
+    {
+      icon: Brain,
+      title: "Psicosocial",
+      bullets: [
+        "Diagnóstico y planes de intervención",
+        "Prevención de estrés, burnout, acoso",
+        "Programas de bienestar laboral",
+      ],
+    },
+    {
+      icon: Users,
+      title: "Ergonómico",
+      bullets: ["Evaluaciones con ISO 12295", "Diseño de puestos de trabajo", "Asesoría en uso de wearables"],
+    },
+    {
+      icon: Heart,
+      title: "Salud Ocupacional",
+      bullets: [
+        "Exámenes médicos (preempleo, periódicos, de salida)",
+        "Programas de vacunación y activación física",
+        "Prevención de adicciones y VIH/SIDA",
+      ],
+    },
+    {
+      icon: Shield,
+      title: "Seguridad y Prevención",
+      bullets: [
+        "Sistemas bajo norma ISO 45001",
+        "Planes de emergencia y contingencia",
+        "Gestión de accidentes laborales",
+      ],
+    },
+  ]
+
+  const process = [
+    {
+      step: "01",
+      title: "Planificación",
+      description: "Análisis inicial y diseño de estrategias personalizadas",
+       color: "from-[#004300] to-[#005a00]", // Verde más oscuro
+      icon: ClipboardList,
+    },
+    {
+      step: "02",
+      title: "Ejecución",
+      description: "Implementación de evaluaciones y programas especializados",
+      color: "from-[#1a7a1a] to-[#2d8f2d]", // Verde medio-oscuro
+      icon: BarChart3,
+    },
+    {
+      step: "03",
+      title: "Seguimiento",
+      description: "Monitoreo continuo y ajustes según resultados",
+      color: "from-[#4CAF50] to-[#66bb6a]", // Verde medio-claro
+      icon: Users,
+    },
+    {
+      step: "04",
+      title: "Asesoría",
+      description: "Acompañamiento permanente y mejora continua",
+      color: "from-[#81c784] to-[#a5d6a7]", // Verde más claro
+      icon: TrendingUp,
+    },
+  ]
+
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-background">
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      {/* Hero Section */}
+  <section
+  className="
+    relative
+    pt-28 md:pt-32          /* espacio por el header fijo */
+    min-h-[850px]
+    bg-no-repeat bg-cover bg-center
+  "
+  style={{ backgroundImage: "url('/images/Fondo.png')" }}
+>
+  {/* Capa sutil para dar contraste al texto si lo necesitas */}
+  <div className="absolute inset-0 bg-black/0 md:bg-black/0" aria-hidden />
+
+  <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h1 className="text-4xl md:text-5xl font-bold text-[#ffff] md:max-w-3xl">
+      Conectamos mente y cuerpo para un trabajo más saludable
+    </h1>
+    <p className="mt-4 text-lg md:text-xl text-[#ffff]/80 md:max-w-2xl font-bold">
+      Ofrecemos evaluaciones especializadas, asesoría técnica y programas 
+      de intervención adaptados a tu empresa. Somos tu aliado estratégico
+       en salud ocupacional, ergonomía y bienestar emocional.
+    </p>
+    <div className="mt-8">
+      <Link
+        href="/contacto"
+         className="
+              inline-flex items-center justify-center
+              rounded-full
+              px-5 py-4
+              text-sm md:text-base font-semibold
+              text-white
+              shadow-md
+              bg-gradient-to-r from-[#004300] to-[#004300]   /* 👈 degradado */
+              transition-all duration-300
+              hover:opacity-60"
+      >
+        Solicita tu evaluación
+      </Link> 
     </div>
-  );
+  </div>
+
+</section>
+
+      {/* Services Section */}
+      <section className="py-0 bg-background">
+        {/* ===== Servicios (Carrusel) ===== */}
+        <div className="mx-auto max-w-[1400px] md:max-w-[1600px] px-2 sm:px-4">
+      <ServicesCarousel />
+      </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+             <div className="text-center mb-8">
+               <p className="text-sm text-primary font-medium mb-2">¿Cómo lo hacemos?</p>
+            <h2 className="text-5xl font-bold text-foreground">Nuestro Proceso</h2>
+          </div>
+
+        
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-0">
+            {process.map((step, index) => {
+              const Icon = step.icon
+              return (
+                <div key={index} className="flex items-center w-full lg:w-auto">
+                  <div
+                    className={`bg-gradient-to-br ${step.color} text-white rounded-t-3xl p-6 shadow-lg w-full lg:w-64 min-h-[240px] flex flex-col justify-between`}
+                  >
+                    <div>
+                      <div className="inline-block bg-black rounded-full px-4 py-1.5 text-xs font-semibold mb-4">
+                        Paso {step.step}
+                      </div>
+                      <div className="mb-4">
+                        <Icon className="h-10 w-10 text-white" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                      <p className="text-sm text-white/90 leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                  {index < process.length - 1 && (
+                    <div className="hidden lg:block mx-2">
+                      <ArrowRight className="h-8 w-8 text-primary" strokeWidth={2.5} />
+                    </div>
+                  )}
+                  {index < process.length - 1 && (
+                    <div className="lg:hidden my-2 rotate-90">
+                      <ArrowRight className="h-8 w-8 text-primary mx-auto" strokeWidth={2.5} />
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      {/* Clients Section */}
+      <section
+        id="clientes"
+        className="py-16 bg-background scroll-mt-32"
+        style={{ scrollMarginTop: "7rem" }} // Ajusta según la altura de tu header
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-5xl font-bold text-foreground">Confían en nosotros</h2>
+          </div>
+          <ClientsMarquee />
+        </div>
+      </section>
+
+         <section className="py-0 bg-background">
+        {/* ===== Servicios (Carrusel) ===== */}
+        <div className="mx-auto max-w-[1400px] md:max-w-[1600px] px-2 sm:px-4">
+       <TeamShowcase />
+      </div>
+      </section>
+
+     
+      <Footer />
+    </div>
+  )
 }
