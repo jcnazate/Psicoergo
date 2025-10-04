@@ -143,3 +143,12 @@
   }
 }
 
+/* Hace que la sección salga del contenedor y use 100vw */
+.full-bleed {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

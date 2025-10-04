@@ -1,15 +1,22 @@
-import "./globals.css";
-import type { Metadata } from "next";
+// app/layout.tsx
+import type { Metadata } from "next"
+import "./globals.css"
+import BootWrapper from "@/components/BootWrapper"
 
 export const metadata: Metadata = {
-  title: "Proyecto",
-  description: "Next + Tailwind",
-};
+  title: "Grupo Psicoergo",
+  description: "Salud ocupacional, ergonomía y bienestar",
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className="antialiased">{children}</body>
+      <body>
+        {/* 👇 Loader de pantalla completa mientras “booting” sea true */}
+        <BootWrapper>
+          {children}
+        </BootWrapper>
+      </body>
     </html>
-  );
+  )
 }
