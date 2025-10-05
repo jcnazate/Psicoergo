@@ -6,7 +6,7 @@ export function ClientsMarquee() {
   const clients = [
     {
       name: "Alkosto",
-      logo: "/images/Clientes/Alkosto.png",
+      logo: "/images/Clientes/Alkosto2.png",
     },
     {
       name: "Hospital Claudio Benatti",
@@ -43,6 +43,10 @@ export function ClientsMarquee() {
     {
       name: "Abraek",
       logo: "/images/Clientes/Abraek.jpg",
+    },
+    {
+      name: "Veris",
+      logo: "/images/Clientes/veris.svg",
     }
   ]
 

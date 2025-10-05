@@ -11,40 +11,7 @@ import Image from "next/image"
 import { ClientsMarquee } from "@/components/clients-marquee"
 
 export default function HomePage() {
-  const services = [
-    {
-      icon: Brain,
-      title: "Psicosocial",
-      bullets: [
-        "Diagnóstico y planes de intervención",
-        "Prevención de estrés, burnout, acoso",
-        "Programas de bienestar laboral",
-      ],
-    },
-    {
-      icon: Users,
-      title: "Ergonómico",
-      bullets: ["Evaluaciones con ISO 12295", "Diseño de puestos de trabajo", "Asesoría en uso de wearables"],
-    },
-    {
-      icon: Heart,
-      title: "Salud Ocupacional",
-      bullets: [
-        "Exámenes médicos (preempleo, periódicos, de salida)",
-        "Programas de vacunación y activación física",
-        "Prevención de adicciones y VIH/SIDA",
-      ],
-    },
-    {
-      icon: Shield,
-      title: "Seguridad y Prevención",
-      bullets: [
-        "Sistemas bajo norma ISO 45001",
-        "Planes de emergencia y contingencia",
-        "Gestión de accidentes laborales",
-      ],
-    },
-  ]
+  
 
   const process = [
     {

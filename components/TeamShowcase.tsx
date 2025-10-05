@@ -14,15 +14,15 @@ type Member = {
 const members: Member[] = [
   {
     name: "Marisol Estrada",
-    role: "Gerente",
+    role: "Gerente General ",
     photo: "/Miembros/Marisol.png",   // 👈 coloca tus fotos en /public/Miembros
-    blurb: "Especialista en prevención psicosocial y bienestar laboral.",
+    blurb: "Grupo Psicoergo.",
   },
   {
     name: "Evelyn Rivera",
-    role: "Psicóloga Ocupacional",
+    role: "Médico Ocupacional",
     photo: "/Miembros/Psicologa.png",
-    blurb: "Acompañamiento emocional y programas de intervención.",
+    blurb: "Grupo Psicoergo",
   },
 ]
 

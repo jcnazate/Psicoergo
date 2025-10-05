@@ -31,7 +31,7 @@ const services = [
 		title: "Servicios en Ergonomía",
 		image: "/images/Ergonomica.png",
 		bullets: [
-			"Valoración y diseño ergonómico (ISO 12295:2014)",
+			"Valoración y diseño ergonómico ",
 			"Evaluación de tareas y posturas",
 			"Asesoría en uso de wearables",
 		],
@@ -51,7 +51,7 @@ const services = [
 		title: "Seguridad y Prevención de Riesgos Laborales",
 		image: "/images/RiesgosLaborales.png",
 		bullets: [
-			"Sistemas de gestión ISO 45001",
+			"Sistemas de gestión ",
 			"Planes de emergencia y contingencia",
 			"Gestión de accidentes laborales",
 		],

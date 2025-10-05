@@ -111,10 +111,10 @@ export function Footer() {
               <ul className="space-y-2 text-white/90 text-lg">
                 {[
                   ["Prevención Psicosocial", "/servicios#psicosocial"],
-                  ["Ergonomía Aplicada (ISO 12295)", "/servicios#ergonomia"],
+                  ["Ergonomía Aplicada ", "/servicios#ergonomia"],
                   ["Salud Ocupacional", "/servicios#salud-ocupacional"],
                   ["Servicios Psicológicos (24/7)", "/servicios#psicologicos"],
-                  ["Seguridad e ISO 45001", "/servicios#seguridad"],
+                  ["Seguridad ", "/servicios#seguridad"],
                 ].map(([label, href]) => (
                   <li key={href}>
                     <Link
