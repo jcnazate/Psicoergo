@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, Brain, Headphones, Users, Heart, Shield, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const services = [
 	{
@@ -15,6 +16,7 @@ const services = [
 			"Planes de intervención personalizados",
 			"Salud mental: estrés, acoso, burnout",
 		],
+		href: "/servicios#servicios-en-riesgo-psicosocial",
 	},
 	{
 		icon: Headphones,
@@ -25,6 +27,7 @@ const services = [
 			"Psicología clínica y nutrición",
 			"Talleres y terapias grupales",
 		],
+		href: "/servicios#servicios-psicologicos-24-7-programa-ser",
 	},
 	{
 		icon: Users,
@@ -35,6 +38,7 @@ const services = [
 			"Evaluación de tareas y posturas",
 			"Asesoría en uso de wearables",
 		],
+		href: "/servicios#servicios-en-ergonomia",
 	},
 	{
 		icon: Heart,
@@ -45,6 +49,7 @@ const services = [
 			"Exámenes médicos (preempleo, periódicos, salida)",
 			"Programas de vacunación y prevención",
 		],
+		href: "/servicios#salud-ocupacional",
 	},
 	{
 		icon: Shield,
@@ -55,6 +60,7 @@ const services = [
 			"Planes de emergencia y contingencia",
 			"Gestión de accidentes laborales",
 		],
+		href: "/servicios#seguridad-y-prevencion-de-riesgos-laborales",
 	},
 ]
 
@@ -153,17 +159,18 @@ export function ServicesCarousel() {
 
                                             {/* Botón alineado */}
                                             <div className="flex items-end justify-center h-[60px]">
-                                                <button
-                                                    className="
-                                                    inline-flex items-center rounded-full px-8 py-3 text-lg font-semibold
-                                                    border border-[#004300] bg-[#004300] text-white shadow-sm
-                                                    transition-all duration-300
-                                                    group-hover:bg-white group-hover:text-[#004300]
-                                                    "
-                                                >
-                                                    Detalles
-                                                    <ArrowRight className="ml-2 h-6 w-6" />
-                                                </button>
+                                                <Link
+													href={service.href}
+													className="
+													inline-flex items-center rounded-full px-8 py-3 text-lg font-semibold
+													border border-[#004300] bg-[#004300] text-white shadow-sm
+													transition-all duration-300
+													group-hover:bg-white group-hover:text-[#004300]
+													"
+												>
+													Detalles
+													<ArrowRight className="ml-2 h-6 w-6" />
+												</Link>
                                             </div>
                                         </CardContent>
                                     </Card>

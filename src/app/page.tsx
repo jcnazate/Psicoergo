@@ -71,22 +71,38 @@ export default function HomePage() {
       de intervención adaptados a tu empresa. Somos tu aliado estratégico
        en salud ocupacional, ergonomía y bienestar emocional.
     </p>
-    <div className="mt-8">
+    <div className="mt-8 flex flex-col sm:flex-row gap-4">
       <Link
         href="/contacto"
-         className="
-              inline-flex items-center justify-center
-              rounded-full
-              px-5 py-4
-              text-sm md:text-base font-semibold
-              text-white
-              shadow-md
-              bg-gradient-to-r from-[#004300] to-[#004300]   /* 👈 degradado */
-              transition-all duration-300
-              hover:opacity-60"
+        className="
+          inline-flex items-center justify-center
+          rounded-full
+          px-5 py-4
+          text-sm md:text-base font-semibold
+          text-white
+          shadow-md
+          bg-gradient-to-r from-[#004300] to-[#004300]   /* 👈 degradado */
+          transition-all duration-300
+          hover:opacity-60"
       >
         Solicita tu evaluación
-      </Link> 
+      </Link>
+      {/* Botón "Conoce más sobre nosotros" */}
+      <Link
+        href="/nosotros"
+        className="
+          inline-flex items-center justify-center
+          rounded-full
+          px-5 py-4
+          text-sm md:text-base font-semibold
+          text-[#004300]
+          shadow-md
+          bg-white border border-[#004300]
+          transition-all duration-300
+          hover:bg-[#e8f3ea] hover:text-[#004300]"
+      >
+        Conoce más sobre nosotros
+      </Link>
     </div>
   </div>
 

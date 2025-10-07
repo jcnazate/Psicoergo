@@ -27,6 +27,7 @@ export function Footer() {
               <span className="text-[#004300]">aquí</span>
             </h3>
 
+            {/* Botón principal redirige a /contacto */}
             <Link
               href="/contacto"
               className="inline-flex items-center rounded-full px-6 py-3
