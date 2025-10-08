@@ -106,21 +106,31 @@ export default function ContactoPage() {
       return
     }
     setSending(true)
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-      const json = await res.json()
-      if (!res.ok || !json.ok) throw new Error(json?.error || "No se pudo enviar el formulario")
-      setOkMsg("¡Gracias! Hemos recibido tu solicitud y te contactaremos pronto.")
-      setFormData({ nombre: "", apellido: "", correo: "", telefono: "", empresa: "", mensaje: "" })
-    } catch (err: any) {
-      setErrorMsg(err?.message || "Ocurrió un error")
-    } finally {
-      setSending(false)
-    }
+   // ... (resto del archivo igual)
+
+// dentro de handleSubmit:
+try {
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  })
+
+  const json = (await res.json()) as { ok?: boolean; error?: string }
+
+  if (!res.ok || !json.ok) {
+    throw new Error(json?.error || "No se pudo enviar el formulario")
+  }
+
+  setOkMsg("¡Gracias! Hemos recibido tu solicitud y te contactaremos pronto.")
+  setFormData({ nombre: "", apellido: "", correo: "", telefono: "", empresa: "", mensaje: "" })
+} catch (err: unknown) {
+  const message = err instanceof Error ? err.message : "Ocurrió un error"
+  setErrorMsg(message)
+} finally {
+  setSending(false)
+}
+
   }
 
   const contactInfo = [

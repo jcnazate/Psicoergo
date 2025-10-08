@@ -92,18 +92,8 @@ export async function POST(req: NextRequest) {
     })
 
     return NextResponse.json({ ok: true, id: info.messageId })
-  } catch (err: any) {
-    // Si falló la validación Zod
-    if (err?.issues) {
-      return NextResponse.json(
-        { ok: false, error: "Datos inválidos", details: err.issues },
-        { status: 400 },
-      )
-    }
-    console.error("Error enviando correo:", err)
-    return NextResponse.json(
-      { ok: false, error: "No se pudo enviar el correo" },
-      { status: 500 },
-    )
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "No se puedo enviar el correo"
+    return NextResponse.json({ ok: false, error: message }, { status: 500 })
   }
 }
