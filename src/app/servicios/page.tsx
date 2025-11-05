@@ -9,7 +9,7 @@ export default function ServiciosPage() {
       id: 1,
       icon: Users,
       emoji: "🌱",
-      title: "Servicios en Riesgo Psicosocial",
+      title: "Servicios Psicosocial",
       badge: "Salud Mental",
       description:
         "En GRUPO PSICOERGO apoyamos a las organizaciones en la detección, prevención y gestión de riesgos que afectan la salud mental y emocional de los colaboradores.",
@@ -31,10 +31,10 @@ export default function ServiciosPage() {
       id: 2,
       icon: Clock,
       emoji: "🧠",
-      title: "Servicios Psicológicos (24/7) – Programa SER",
-      badge: "Disponible 24/7",
+      title: "Servicios Psicológicos Especializados – Programa SER",
+      badge: "Psicoterapia individual",
       description:
-        "Nuestro Programa SER (Soporte Emocional y Resiliencia) está disponible las 24 horas del día, ofreciendo atención inmediata y especializada.",
+        "Nuestro Programa SER (Soporte Emocional y Resiliencia) , ofreciendo atención inmediata y especializada.",
       image: "/images/servicios/Psicologicos2.png",
       items: [
         "Psicología clínica: acompañamiento profesional para la salud mental individual.",
@@ -46,7 +46,7 @@ export default function ServiciosPage() {
         "Este servicio fortalece la salud mental, física y emocional de los colaboradores, promoviendo la resiliencia y el equilibrio en la vida laboral.",
       gradient: "from-[#005a00] to-[#007a00]",
       stats: [
-        { value: "24/7", label: "Disponibilidad" },
+        { value: "100%", label: "Psicoterapia" },
         { value: "100+", label: "Consultas mensuales" },
       ],
     },
@@ -101,7 +101,7 @@ export default function ServiciosPage() {
       id: 5,
       icon: Shield,
       emoji: "🦺",
-      title: "Seguridad y Prevención de Riesgos Laborales",
+      title: "Higiene Laboral y Prevención de Riesgos Laborales",
       badge: "Seguridad Total",
       description:
         "Apoyamos a las empresas en la implementación de sistemas de gestión que protegen la integridad de sus equipos.",

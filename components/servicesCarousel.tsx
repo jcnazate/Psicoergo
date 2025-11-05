@@ -9,23 +9,24 @@ import Link from "next/link"
 const services = [
 	{
 		icon: Brain,
-		title: "Servicios en Riesgo Psicosocial",
+		title: "Servicios  Psicosocial",
 		image: "/images/Psicosocial.png",
 		bullets: [
-			"Diagnóstico y evaluación con instrumentos",
-			"Planes de intervención personalizados",
-			"Salud mental: estrés, acoso, burnout",
+			"Diagnóstico y evaluación ",
+			"Planes de intervención ",
+			"Salud mental",
 		],
 		href: "/servicios#servicios-en-riesgo-psicosocial",
 	},
 	{
 		icon: Headphones,
-		title: "Servicios Psicológicos (24/7) ",
+		title: "Servicios Psicológicos Especializados",
 		image: "/images/ServiciosPsicologico.png",
 		bullets: [
-			"Soporte Emocional y Resiliencia",
-			"Psicología clínica y nutrición",
-			"Talleres y terapias grupales",
+
+			"Psicoterapia individual",
+			"Auxilio psicológico ",
+			"Alianza con Especialistas en Salud Mental",
 		],
 		href: "/servicios#servicios-psicologicos-24-7-programa-ser",
 	},
@@ -34,9 +35,10 @@ const services = [
 		title: "Servicios en Ergonomía",
 		image: "/images/Ergonomica.png",
 		bullets: [
-			"Valoración y diseño ergonómico ",
-			"Evaluación de tareas y posturas",
-			"Asesoría en uso de wearables",
+			"Evaluación Ergonómica con metodologías validados",
+			"Planes de Intervención ",
+			"Servicio de Capacitación", 
+
 		],
 		href: "/servicios#servicios-en-ergonomia",
 	},
@@ -46,19 +48,19 @@ const services = [
 		image: "/images/SaludOcupacional.png",
 		bullets: [
 			"Vigilancia de la salud de trabajadores",
-			"Exámenes médicos (preempleo, periódicos, salida)",
+			"Exámenes Médicos (preempleo, periódicos, salida)",
 			"Programas de vacunación y prevención",
 		],
 		href: "/servicios#salud-ocupacional",
 	},
 	{
 		icon: Shield,
-		title: "Seguridad y Prevención de Riesgos Laborales",
+		title: "Higiene Laboral y Prevención de Riesgos Laborales",
 		image: "/images/RiesgosLaborales.png",
 		bullets: [
-			"Sistemas de gestión ",
+			"Sistemas de Gestión bajo las normas ISO",
 			"Planes de emergencia y contingencia",
-			"Gestión de accidentes laborales",
+			"Mediciones Higiénicas Laborales",
 		],
 		href: "/servicios#seguridad-y-prevencion-de-riesgos-laborales",
 	},
@@ -142,17 +144,17 @@ export function ServicesCarousel() {
                                                 </h3>
                                             </div>
 
-                                            {/* Bullets alineados */}
-                                            <ul className="flex flex-col justify-center row-start-3 space-y-2 w-full min-h-[120px]">
+                                            {/* Bullets alineados a la izquierda */}
+                                            <ul className="flex flex-col justify-center row-start-3 space-y-2 w-full min-h-[120px] px-4">
                                                 {service.bullets.map((bullet, bulletIndex) => (
                                                     <li
                                                         key={bulletIndex}
-                                                        className="text-lg text-muted-foreground group-hover:text-white flex items-start justify-center transition-colors duration-300"
+                                                        className="text-lg text-muted-foreground group-hover:text-white flex items-start transition-colors duration-300"
                                                     >
-                                                        <span className="mr-2 text-[#004300] group-hover:text-white transition-colors duration-300">
+                                                        <span className="mr-2 text-[#004300] group-hover:text-white transition-colors duration-300 flex-shrink-0">
                                                             ✓
                                                         </span>
-                                                        <span className="text-left">{bullet}</span>
+                                                        <span>{bullet}</span>
                                                     </li>
                                                 ))}
                                             </ul>

@@ -114,8 +114,8 @@ export function Footer() {
                   ["Prevención Psicosocial", "/servicios#psicosocial"],
                   ["Ergonomía Aplicada ", "/servicios#ergonomia"],
                   ["Salud Ocupacional", "/servicios#salud-ocupacional"],
-                  ["Servicios Psicológicos (24/7)", "/servicios#psicologicos"],
-                  ["Seguridad ", "/servicios#seguridad"],
+                  ["Servicios Psicológicos ", "/servicios#psicologicos"],
+                  ["Higiene Laboral y Prevención de Riesgos Laborales", "/servicios#seguridad"],
                 ].map(([label, href]) => (
                   <li key={href}>
                     <Link

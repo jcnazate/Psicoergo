@@ -137,8 +137,8 @@ try {
     {
       icon: Mail,
       title: "Correo Electrónico",
-      details: "evaluaciones.psicoergonomia@gmail.com",
-      action: "mailto:evaluaciones.psicoergonomia@gmail.com?subject=Consulta%20desde%20el%20sitio",
+      details: "psicoergo7@gmail.com",
+      action: "mailto:psicoergo7@gmail.com?subject=Consulta%20desde%20el%20sitio",
       gradient: "from-[#004300] to-[#005a00]",
     },
     {
@@ -410,20 +410,7 @@ try {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#a5d6a7] hover:border-[#4CAF50] transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#4CAF50] to-[#81c784] rounded-xl flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-[#004300] mb-2 text-lg">Ubicación</h3>
-                      <p className="text-[#424242]">Quito, Ecuador</p>
-                      <p className="text-sm text-[#424242]/70 mt-1">Atención en todo el país</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            
             </div>
           </div>
         </div>

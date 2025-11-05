@@ -41,7 +41,7 @@ const SLIDES: Slide[] = [
     ctaHref: "/contacto",
   },
   {
-    image: "/images/2.png",
+    image: "/images/2.2.png",
     title: "Cuidamos la salud mental y física en el trabajo",
     subtitle: "Programas, diagnósticos y acompañamiento continuo",
     ctaText: "Conoce nuestros servicios",
