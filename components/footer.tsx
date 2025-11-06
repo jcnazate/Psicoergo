@@ -138,10 +138,10 @@ export function Footer() {
                 <div className="flex items-start gap-3">
                   <Mail className="h-5 w-5 mt-1" />
                   <a
-                    href="mailto:evaluaciones.psicoergonomia@gmail.com"
+                    href="mailto:psicoergo7@gmail.com"
                     className="hover:underline"
                   >
-                    evaluaciones.psicoergonomia@gmail.com
+                    psicoergo7@gmail.com
                   </a>
                 </div>
 
