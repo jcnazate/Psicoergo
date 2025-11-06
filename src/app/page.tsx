@@ -57,7 +57,7 @@ export default function HomePage() {
     min-h-[850px]
     bg-no-repeat bg-cover bg-center
   "
-  style={{ backgroundImage: "url('/images/Fondo.png')" }}
+  style={{ backgroundImage: "url('/images/Fondo2.png')" }}
 >
   {/* Capa sutil para dar contraste al texto si lo necesitas */}
   <div className="absolute inset-0 bg-black/0 md:bg-black/0" aria-hidden />
