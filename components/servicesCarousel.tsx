@@ -127,7 +127,7 @@ export function ServicesCarousel() {
                                             relative z-10 p-8 h-full
                                             grid grid-rows-[80px_60px_1fr_60px] gap-0
                                             items-center
-                                            text-center
+                                            text-left 
                                             "
                                         >
                                             {/* Icono alineado */}
@@ -145,7 +145,7 @@ export function ServicesCarousel() {
                                             </div>
 
                                             {/* Bullets alineados a la izquierda */}
-                                            <ul className="flex flex-col justify-center row-start-3 space-y-2 w-full min-h-[120px] px-4">
+  											<ul className="flex flex-col items-start row-start-3 space-y-2 w-full min-h-[120px] px-4">
                                                 {service.bullets.map((bullet, bulletIndex) => (
                                                     <li
                                                         key={bulletIndex}
