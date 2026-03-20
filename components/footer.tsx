@@ -1,4 +1,5 @@
 // components/footer.tsx
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import {
@@ -167,6 +168,17 @@ export function Footer() {
             <div>
               © {new Date().getFullYear()} GRUPO PSICOERGO. Todos los derechos reservados.
             </div>
+
+            {/* 👁️ Contador de visitas */}
+            <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://visitor-badge.laobi.icu/badge?page_id=grupopsicoergo.sitio&left_color=%236AA96A&right_color=%23004300&left_text=Visitas"
+                alt="Contador de visitas Psicoergo"
+                style={{ height: '22px', borderRadius: '4px' }}
+              />
+            </div>
+
             <div className="flex items-center gap-6">
               <Link href="/terminos" className="hover:underline">Términos de uso</Link>
               <Link href="/privacidad" className="hover:underline">Política de privacidad</Link>
